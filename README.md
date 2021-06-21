@@ -25,7 +25,7 @@ gcloud container clusters get-credentials [CLUSTER_NAME] --zone=[ZONE]
 ```
 
 ### 2.3 Crear reglas firewall en GoogleCloud
-Es necesario crear reglas de firewall para permitir los puertos 8000 en este caso que es el que usa la aplicación. Para ello en GoogleCloud en el menú navegamos a Red de VPC, en sus distintas secciones se selecciona firewall y ahí creamos una nueva regla. Indicamos Rango de IP 0.0.0.0/0, protocolos y puertos tcp:8000-8001, lo asignamos a la red default y lo aplicamos a todas las instancia de la red para este caso. Lo mejor sería solo asignarlo al clúster de kubernetes en este caso.
+Es necesario crear reglas de firewall para permitir el puerto 8000 en este caso que es el que usa la aplicación. Para ello en GoogleCloud en el menú navegamos a Red de VPC, en sus distintas secciones se selecciona firewall y ahí creamos una nueva regla. Indicamos Rango de IP 0.0.0.0/0, protocolos y puertos tcp:8000-8001, lo asignamos a la red default y lo aplicamos a todas las instancia de la red para este caso. Lo mejor sería solo asignarlo al clúster de kubernetes en este caso.
 
 ## 3. Ejecución
 Tenemos los ficheros correspondientes al deployment y el servicio de la base de datos de Postgres (db) y otro para la aplicación Django (result). Para su ejecución se usa el comando 
