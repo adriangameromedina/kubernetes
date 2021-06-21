@@ -30,3 +30,7 @@ Es necesario crear reglas de firewall para permitir el puerto 8000 en este caso 
 ## 3. Ejecución
 Tenemos los ficheros correspondientes al deployment y el servicio de la base de datos de Postgres (db) y otro para la aplicación Django (result). Para su ejecución se usa el comando 
 ```kubectl apply -f .```
+
+## 4. Escalado 
+Para realizar el escalado de nuestra aplicación se le puede asignar el numero de replicas al deployment en concreto que queramos con el siguiente comando:
+```kubectl scale [DEPLOYMENT_NAME] --replicas=[NUMBER OF REPLICAS]```
