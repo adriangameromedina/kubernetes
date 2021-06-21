@@ -31,7 +31,7 @@ Es necesario crear reglas de firewall para permitir el puerto 8000 en este caso 
 Tenemos los ficheros correspondientes al deployment y el servicio de la base de datos de Postgres (db) y otro para la aplicación Django (result). Para su ejecución se usa el comando 
 ```kubectl apply -f .```
 
-Si vamos a GoogleCloud a Kubernetes engine y pinchamos en Ingress y servicios, ahí tendremos la base de datos (db) y la aplicación (result) que aparecerá una IP:PUERTO para acceder (en este caso 34.134.0.170:8000).
+Si vamos a GoogleCloud a Kubernetes engine y pinchamos en Ingress y servicios, ahí tendremos la base de datos (db) y la aplicación (result) que aparecerá una IP:PUERTO para acceder ```(en este caso 34.134.0.170:8000)```.
 
 ## 4. Escalado 
 Para realizar el escalado de nuestra aplicación se le puede asignar el numero de replicas al deployment en concreto que queramos con el siguiente comando:
